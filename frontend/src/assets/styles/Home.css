@@ -1,0 +1,89 @@
+  /* Home section styling */
+.home{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 8vh;
+}
+
+  /* Video styling in the home section */
+.home video{
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    background-position: center;
+}
+
+ /* Home intro section styling */
+#home-intro{
+    margin-top: -11px;
+    padding: 0;
+    height: 22vh;
+    background-color: #56585632;
+}
+
+ /* Header styling in the about pokemon section */
+.about-pokemon-header{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+/* Styling for available pokemon section */
+.avialable-pokemon{
+    background-image: url("https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=e365-w1922");
+}
+
+  /* Paragraph styling in the home intro section */
+#home-intro .about-para{
+    padding: 5px;
+    text-align: center;
+}
+
+ /* Header styling in the home section */
+#pokemon-header{
+    
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+   /* Styling for home cards section */
+#home-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Media query for screen width less than 952px */
+@media (max-width: 952px){
+    
+    .home video{
+        margin-top: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }  
+    #home-intro{
+        height: 50vh;
+    }
+    .about-pokemon-header{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 50px;
+    }
+    #home-intro .about-para{
+        padding: 4px;
+        padding-top: 0;
+        font-size: 14px;
+    }
+}

@@ -9,16 +9,16 @@
 /* Styling for the container card */
 .container-card{
   position: relative;
-  width: 280px;
-  height: 420px;
+  width: 200px;
+  height: 320px;
   margin: 10px;
 }
 
 /* Styling for the card element within the container card */
 .container-card .card{
   position: relative;
-  width: 280px;
-  height: 420px;
+  width: 100%;
+  height: 100%;
   background: #1b242f;
   border-radius: 20px;
   overflow: hidden;
@@ -33,13 +33,13 @@
   width: 100%;
   height: 100%;
   background: white;
-  clip-path: circle(150px at 80% 20%);
+  clip-path: circle(80px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
 
 /* Hover effect for the before pseudo-element of the card */
 .container-card .card:hover:before{
-  clip-path: circle(300px at 80% -20%);
+  clip-path: circle(220px at 80% -20%);
 }
 
 /* Styling for the after pseudo-element of the card */
@@ -51,7 +51,7 @@
   font-size: 3.6em;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255,255,25,0.05)
+  color: rgba(247, 247, 242, 0.05)
 }
 
 /* Styling for the image box within the card */
@@ -85,7 +85,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 70px;
   text-align: center;
   transition: 1s;
   z-index: 10;
@@ -93,13 +93,13 @@
 
 /* Hover effect for the content box within the card */
 .container-card .card:hover .contentBx{
-  height: 210px;
+  height: 150px;
 }
 
 /* Styling for the heading within the content box */
-.container-card .card .contentBx h4{
+.container-card .card .contentBx h5{
   position: relative;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
   margin: 0;
@@ -140,11 +140,11 @@
 .container-card .card .contentBx .status h6{
   padding: 2px 2px;
   text-align: center;
-  line-height: 26px;
-  font-size: 14px;
+  line-height: 15px;
+  font-size: 12px;
   display: block;
   color: #ece8e8;
-  margin:2px 2px;
+  margin:0px 2px;
   transition: 0.5s;
   border-radius: 4px;
   cursor: pointer;
@@ -183,7 +183,7 @@
 /* Styling for the content box links */
 .container-card .card .contentBx a{
   display: inline-block;
-  padding: 10px 20px;
+  padding: 4px 10px;
   background: #fff;
   border-radius: 4px;
   margin-top: 10px;

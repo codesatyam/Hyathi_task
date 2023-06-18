@@ -2,8 +2,11 @@
   /* Top footer styling */
   width: 100%;
   padding-top: 25px;
+  font-size: 14px;
 }
-
+.left h5{
+  font-size: 15px;
+}
 .bottom-social-icons{
   /* Bottom social icons styling */
   width: 100px;
@@ -22,7 +25,7 @@
 
 .bottom-social-icons:hover{
   /* Hover styling for bottom social icons */
-  background-color: #e31b6d;
+  background-color: #0f224a;
   color: #1b242f;
 }
 
@@ -38,9 +41,9 @@
     font-size: 10px;
   }
   .topfoot .fo-right{
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .left h5{
-    font-size: 15px;
+    font-size: 14px;
   }
 }

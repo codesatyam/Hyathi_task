@@ -1,5 +1,5 @@
  /* Form container styling */
-.form-con{
+.log-form-con{
   
   display: flex;
   justify-content: center;
@@ -11,11 +11,11 @@
   width: 100%;
 }
  /* Form box styling */
-.form-box {
+ .log-form-con .form-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   min-height: 100%;
 }
   /* Form styling */
@@ -23,7 +23,7 @@
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: auto;
+  height: 70%;
   padding: 20px;
   width: 320px;
 }
@@ -114,6 +114,13 @@
   transition: transform 200ms, color 200ms;
   top: 20px;
 }
+.form-btm-text{
+  color: #ffff;
+
+}
+/* .form-btm-text .form-btm-a:hover{
+  color: 5C469C;
+} */
 
  /* Form input focus or not empty placeholder styling */
 .form-input:focus~.form-placeholder,
@@ -133,5 +140,5 @@
 
   /* Form submit button styling */
 .form-submit {
-  background-color: #934cce5e;
+  background-color: #5C469C;
 }

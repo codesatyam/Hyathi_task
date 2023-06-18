@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useContext } from 'react'
 import "../assets/styles/Home.css"
 import Pokemoncard from './Pokemoncard'
-
+import axios from 'axios'
+import { Context } from '../main'
 /* Home  page*/
 const Home = () => {
+  const {pokData} = useContext(Context);
+
   return (
     <section className='home'>
       {/* Video */}
-      <video autoplay loop muted controls>
+      <video autoPlay loop muted >
         <source src="https://storage.googleapis.com/pgoblog/HiddenGems/PGO_S11_LaunchTrailer_16x9_en.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -37,13 +40,11 @@ const Home = () => {
 
         {/* Home Cards */}
         <div id="home-cards">
-          <Pokemoncard />
-          <Pokemoncard />
-          <Pokemoncard />
-          <Pokemoncard />
-          <Pokemoncard />
-          <Pokemoncard />
-          <Pokemoncard />
+        { pokData.map((item)=>{
+          return <Pokemoncard Pid={item.id} name={item.name} img={item.sprites.front_default}/>
+         }
+         )
+        }
         </div>
       </div>
     </section>

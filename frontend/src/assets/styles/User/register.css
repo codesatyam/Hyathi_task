@@ -1,5 +1,5 @@
   /* Form container styling */
-.form-con{
+.reg-form-con{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
  /* Form box styling */
-.form-box {
+ .reg-form-con .form-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,11 +20,11 @@
 }
 
   /* Form styling */
-.form-form {
+  .reg-form-con .form-form {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 88%;
+  height: 85%;
   padding: 20px;
   width: 320px;
 }
@@ -55,12 +55,12 @@
   width: 100%;
 }
 
-.form-ic1 {
-  margin-top: 30px;
+.reg-form-con .form-ic1 {
+  margin-top: 15px;
 }
 
-.form-ic2 {
-  margin-top: 30px;
+.reg-form-con .form-ic2 {
+  margin-top: 15px;
 }
 
   /* Form input styling */
@@ -87,7 +87,7 @@
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 150px;
+  width:  auto;
 }
 
 .form-cut-short {
@@ -117,7 +117,7 @@
 
 .form-input:focus~.form-placeholder,
 .form-input:not(:placeholder-shown)~.form-placeholder {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
+  transform: translateY(-20px) translateX(10px) scale(0.75);
 }
 
 .form-input:not(:placeholder-shown)~.form-placeholder {
@@ -153,15 +153,16 @@
 }
 
 .form-btm-a {
-   
+  margin-left: 3px;
   cursor: pointer;
  
 }
 
 .form-btm-a:hover {
-  color: #1312145e;
+  color: #ab7fd85e;
   background-color:none !important;
   border-radius: 5px;
+ 
 }
 
 .signup-form{

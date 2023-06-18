@@ -23,7 +23,12 @@
     margin-top: -11px;
     padding: 0;
     height: 22vh;
-    background-color: #56585632;
+    /* background-color:#1D267D; */
+    background-color: #8b80ab;
+    /* background-color: white; */
+    /* background-color: wheat; */
+
+    color: white;
 }
 
  /* Header styling in the about pokemon section */
@@ -35,12 +40,20 @@
 
 /* Styling for available pokemon section */
 .avialable-pokemon{
-    background-image: url("https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=e365-w1922");
+    padding-top: 5px;
+    color: white;
+    /* background-color: #1D267D; */
+    background-color: #8b80ab;
+    /* background-color: wheat; */
+
+    /* background-image: url("https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=e365-w1922"); */
 }
 
   /* Paragraph styling in the home intro section */
 #home-intro .about-para{
+  
     padding: 5px;
+    padding-top: 0px;
     text-align: center;
 }
 

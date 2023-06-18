@@ -1,19 +1,23 @@
 /* This code defines the CSS for the navigation bar. */
 nav {
-  background-color: #0f224a;
+  background-color: #5C469C;
   height: 9vh;
   width: 100%;
   box-sizing: border-box;
   z-index: 5;
+  color: black;
   }
   
   /* This code defines the CSS for the logo label. */
-  label.logo {
-  color: white;
-  font-size: 30px;
+  .logo {
+  color: #f3f4f6;
+  font-size: 25px;
   line-height: 9vh;
-  padding: 0 100px;
-  font-weight: bold;
+  padding: 0 50px;
+  font-weight: 600;
+  }
+  .logo span{
+    color: #0C134F;
   }
   
   /* This code defines the CSS for the navigation list. */
@@ -34,7 +38,7 @@ nav {
   
   /* This code defines the CSS for the navigation list item links. */
   nav ul li a {
-  color: white;
+  color: rgb(11, 10, 10);
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -43,12 +47,14 @@ nav {
   }
   
   /* This code defines the CSS for the active and hovered navigation list item links. */
-  a.active,
   a:hover {
-  background: #1b9bff;
+    /* border-bottom: 2px soild #1D267D; */
+    /* text-decoration: underline #1D267D; */
+  /* background: #153780; */
   transition: 0.5s;
   color: white;
   }
+  
   
   /* This code defines the CSS for the check button. */
   .checkbtn {

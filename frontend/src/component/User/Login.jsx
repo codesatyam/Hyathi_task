@@ -1,16 +1,54 @@
 import React,{  useState } from 'react';
 import { Context } from '../../main';
 import { useContext } from 'react'; 
-import { NavLink } from 'react-router-dom';
-
+import { NavLink ,Navigate} from 'react-router-dom';
+import { toast } from "react-hot-toast";
+import axios from 'axios';
+import { server } from '../../main';
 import "./../../assets/styles/User/login.css"
 
 const Login=()=> {
   const { isAuthenticated, setIsAuthenticated, loading, setLoading, setUser } =useContext(Context);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    // console.log(email,password);
+
+    try {
+      const {data}  = await axios.post(
+        `${server}/api/v1/users/login`,
+        {
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      console.log(data);
+      toast.success(data.message);
+      
+      // window.alert(data.udata.name);
+      setUser(data.udata);
+      setIsAuthenticated(true);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data.message);
+      setLoading(false);
+      setIsAuthenticated(false);
+    }
+  };
+
+  if (isAuthenticated) return <Navigate to={"/"} />;
+
   return (
-    <div className="form-con">
+    <div className="log-form-con">
  <div className='form-box'>
       <div className="form-form">
         <div className="form-title">Welcome Back</div>
@@ -33,7 +71,7 @@ const Login=()=> {
         </div>
         <button type="submit"
         //   disabled={disableBtn}
-        //   onClick={loginUser}
+          onClick={submitHandler}
           className="form-submit">Sign In</button>
         <br />
         <br />

@@ -35,11 +35,11 @@ const Navbar = () => {
        </label>
         <label class="logo">Pokemon<span>APP</span></label>
         <ul>
-            <li> <a className='active' href="/">Home</a></li>
-            <li><a href="">Adopt</a></li>
-            <li><a href="">My Pokemon</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Help</a></li>
+            <li> <NavLink className='active'  exact to="/">Home</NavLink></li>
+            <li><NavLink exact to="/adopt">Adopt</NavLink></li>
+            <li><NavLink  exact to="/mypokemon">My Pokemon</NavLink></li>
+            <li><NavLink  exact to="/profile">Profile</NavLink></li>
+            <li><NavLink  exact to="/help">Help</NavLink></li>
             {isAuthenticated?<li><NavLink disabled={loading} onClick={logoutHandler} exact to="/">Logout</NavLink></li>:
             <li><NavLink exact to="/signin">Login</NavLink></li>}
         </ul>

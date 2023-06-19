@@ -1,0 +1,79 @@
+#profile-con{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    top: 20px;
+    background-color: #8b80ab;
+}
+.dashboard{
+    background-color: mediumblue;
+    color: #ffff;
+    padding: 0px 30px;
+    margin-top: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+#profile-con main{
+    display: flex;
+}
+#profile-con main #left{
+    width: 30%;
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid white;
+    /* height: fit-content; */
+    background-color: #1b242f;
+}
+#profile-con main #left #pic{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+#profile-con main #left #personal-details{
+    /* border: 2px solid rgb(86, 143, 228); */
+    margin-top: 20px;
+    
+}
+
+#profile-con main #left #personal-details h6{
+    font-size: 12px;
+     padding: 5px;
+     margin: 0;
+    background-color: aliceblue;
+    border:1px solid #8b80ab;
+    border-radius: 5px;
+}
+#profile-con main #right{
+    width: 70%;
+    border: 2px solid white;
+    /* padding: 5px; */
+    margin: 2px 2px 2px 2px;
+}
+#profile-con main #right header{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid white;
+    padding: 4px;
+}
+
+#profile-con main #right header span{
+    width: 90px;
+    height: 90px;
+    background-color: #1b242f;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#profile-con #right main{
+     display: flex;
+     flex-direction: column;
+}
+.avialable-pokemon-profile{
+    margin: 0;
+}

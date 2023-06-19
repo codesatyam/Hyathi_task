@@ -10,7 +10,7 @@
 .container-card{
   position: relative;
   width: 200px;
-  height: 320px;
+  height: 260px;
   margin: 10px;
 }
 
@@ -39,7 +39,7 @@
 
 /* Hover effect for the before pseudo-element of the card */
 .container-card .card:hover:before{
-  clip-path: circle(220px at 80% -20%);
+  clip-path: circle(200px at 80% -20%);
 }
 
 /* Styling for the after pseudo-element of the card */
@@ -48,7 +48,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  font-size: 3.6em;
+  font-size: 2.6em;
   font-weight: 800;
   font-style: italic;
   color: rgba(247, 247, 242, 0.05)
@@ -61,7 +61,7 @@
   transform: translateY(-50%);
   z-index: 10000;
   width: 100%;
-  height: 220px;
+  height: 160px;
   transition: 0.5s;
 }
 
@@ -74,10 +74,11 @@
 /* Styling for the image within the image box */
 .container-card .card .imgBx img{
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-25deg);
-  width: 270px;
+  width: 80px;
+  box-sizing: border-box;
 }
 
 /* Styling for the content box within the card */
@@ -93,7 +94,7 @@
 
 /* Hover effect for the content box within the card */
 .container-card .card:hover .contentBx{
-  height: 150px;
+  height: 115px;
 }
 
 /* Styling for the heading within the content box */
@@ -103,6 +104,7 @@
   letter-spacing: 1px;
   color: #fff;
   margin: 0;
+  text-transform: uppercase;
 }
 /* Styling for the status container */
 .container-card .card .contentBx .status {
@@ -138,9 +140,9 @@
 
 /* Styling for the status h6 element */
 .container-card .card .contentBx .status h6{
-  padding: 2px 2px;
+  padding: 0px 0px;
   text-align: center;
-  line-height: 15px;
+  line-height: 12px;
   font-size: 12px;
   display: block;
   color: #ece8e8;
@@ -151,44 +153,47 @@
 }
 
 /* Styling for the size span on hover */
-.container-card .card .contentBx .size span:hover{
+/* .container-card .card .contentBx .size span:hover{
   background: #1b1b1b;
-}
+} */
 
 /* Styling for the color spans */
-.container-card .card .contentBx .color span{
+/* .container-card .card .contentBx .color span{
   width: 20px;
   height: 20px;
   background: #ff0;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-}
+} */
 
-/* Styling for the second color span */
+/* Styling for the second color span 
 .container-card .card .contentBx .color span:nth-child(2){
   background: #9bdc28;
 }
 
-/* Styling for the third color span */
+ 
 .container-card .card .contentBx .color span:nth-child(3){
   background: #03a9f4;
 }
 
-/* Styling for the fourth color span */
+ 
 .container-card .card .contentBx .color span:nth-child(4){
   background: #e91e63;
 }
-
-/* Styling for the content box links */
-.container-card .card .contentBx a{
+ */
+ .link{
+  display: flex;
+  justify-content: space-evenly;
+ }
+.container-card .card .contentBx .link .nav-link{
   display: inline-block;
-  padding: 4px 10px;
+  padding: 2px 3px;
   background: #fff;
   border-radius: 4px;
-  margin-top: 10px;
+  margin-top: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   color: #111;
   opacity: 0;
   transform: translateY(50px);
@@ -197,7 +202,7 @@
 }
 
 /* Show content box links on hover */
-.container-card .card:hover .contentBx a{
+.container-card .card:hover .contentBx .nav-link{
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;

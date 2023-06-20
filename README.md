@@ -2,66 +2,32 @@
 
 ## Objective
 
-Your task is to create an application that simulates a virtual Pokemon adoption scenario. The app should allow users to:
+An application that simulates a virtual Pokemon adoption scenario. The app should allow users to:
 
 - Register and log in.
 - View available Pokemon for adoption (each Pokemon has different attributes like breed, age, health status, etc.).
 - Adopt a Pokemon (Each user can adopt multiple Pokemon, but each Pokemon can be adopted only once).
 - Once a Pokemon is adopted, the user can feed the Pokemon (each feeding increases Pokemon's health status).
-- If a Pokemon isn't fed for a certain time (ex: 24 hours), its health status decreases.
 
-We will provide you with a basic code skeleton for both the frontend and the backend, which has a few different bugs that prevent the application from running. Your first task will be to identify and resolve these bugs to get the application running.
-
-Please note, the main goal of this task is to understand your mindset, approach, technical understanding, problem-solving skills, and logical reasoning capabilities rather than just delivering a complete project. Feel free to document your process and decisions in the code comments or in your commit messages.
-
-## Tech Stack
-
-- Backend: Node.js, Express, and MongoDB
-- Frontend: React
-- We prefer Typescript but Javascript can be used as well.
-
-## Instructions
-
-1. Please fork the provided repository and clone it to your local machine. You'll complete your work on your own forked repository.
-
-2. We encourage you to make regular, meaningful commits to your repository. This isn't about making one large commit at the end of the project. Instead, we want to see a progression of commits that reflect your development process.
-
-While we've provided a 5-day breakdown, feel free to complete the project early or follow your own process if you're more comfortable with that.
-
-## 5-Day Project Breakdown
-
-### Day 1
-
-- Identify and resolve the bugs in the provided skeleton code to get the application running.
-- Develop the User Registration functionality:
-   - Backend: Create the appropriate endpoint and database schema for user registration.
-   - Frontend: Use React to create the registration form and handle the form submission.
-
-### Day 2
-
-- Develop the User Login functionality:
-   - Backend: Create the appropriate endpoint for user authentication.
-   - Frontend: Create the login form and handle the form submission.
-- Set up the basic framework for displaying Pokemon:
-   - Backend: Set up the endpoints and database schema for handling Pokemon data.
-   - Frontend: Create a basic view for displaying all the Pokemon.
-
-### Day 3
-
-- Refine the Pokemon display view and add Pokemon adoption feature:
-   - Backend: Create the appropriate endpoint and schema modifications to handle Pokemon adoption.
-   - Frontend: Add a button or link to each Pokemon to allow users to adopt them.
-
-### Day 4
-
-- Implement the functionality for a user to feed their Pokemon and to update the health status:
-   - Backend: Create the appropriate endpoint.
-   - Frontend: Add a feed button to each Pokemon that the user has adopted.
-
-### Day 5
-
-- Implement a job (using something like node-cron) that decreases the health status of each Pokemon that hasn't been fed in the last 24 hours.
-- Document all the endpoints using Postman and provide a collection of requests.
-- After the task is completed please add iamuddeshya in your repo as a collaborator and email ua@hyathi.com to acknowledge you completed the task attaching the repo link in the email.
-
-Good luck!
+## Features
+- View a collection of Pokemon cards
+- Pagination for navigating through the collection
+- View detailed information about each Pokemon
+- Adopt a Pokemon and add it to your collection
+- Remove a Pokemon from your collection
+- User authentication for personalized experience
+- User profile to manage adopted Pokemon
+- Show additional details of a Pokemon
+- Search for a specific Pokemon by name or ID
+- Filter the Pokemon collection by specific criteria(In development Phase)
+## Technologies Used
+React: JavaScript library for building user interfaces
+React Router: Library for handling navigation within the application
+Axios: Library for making HTTP requests to external APIs
+React Hot Toast: Library for displaying toast notifications
+Context API: State management for sharing data across components
+CSS: Styling the application
+Node.js: JavaScript runtime environment
+Express: Web application framework for Node.js
+MongoDB: NoSQL database for storing user and Pokemon data
+JWT (JSON Web Tokens): User authentication mechanism

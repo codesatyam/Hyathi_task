@@ -13,6 +13,7 @@ const schema = new mongoose.Schema({
   password: {
     required: true,
     type: String,
+    required: true,
     select: false,
   },
   usertype: {

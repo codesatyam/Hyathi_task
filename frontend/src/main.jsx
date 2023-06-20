@@ -1,11 +1,12 @@
+// Import necessary dependencies
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import './index.css';
 import { createContext } from "react";
 
+// Set the server URL
+export const server = "http://localhost:4000";
 
-export const server = "http://localhost:4000"; 
 // Create a context
 export const Context = createContext({ isAuthenticated: false });
 
@@ -16,11 +17,12 @@ const AppWrapper = () => {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState({});
   const [countUser, setCountUser] = useState(0);
-  const [urlPok,setUrlPok]=useState();
-  const [nextUrl,setNextUrl]=useState();
-  const [preUrl,setPreUrl]=useState();
-  const [pokData,setPokemonData]=useState([]);
-  
+  const [urlPok, setUrlPok] = useState();
+  const [nextUrl, setNextUrl] = useState();
+  const [preUrl, setPreUrl] = useState();
+  const [pokData, setPokemonData] = useState([]);
+  const [mypokemons, setMyPokemons] = useState([]);
+  const [refresh, setRefresh] = useState(false);
 
   return (
     // Provide the context values to the App component
@@ -36,10 +38,18 @@ const AppWrapper = () => {
         setlogU,
         countUser,
         setCountUser,
-        urlPok,setUrlPok,
-        nextUrl,setNextUrl,
-        preUrl,setPreUrl,
-        pokData,setPokemonData
+        urlPok,
+        setUrlPok,
+        nextUrl,
+        setNextUrl,
+        preUrl,
+        setPreUrl,
+        pokData,
+        setPokemonData,
+        mypokemons,
+        setMyPokemons,
+        refresh,
+        setRefresh
       }}
     >
       <App />
@@ -47,6 +57,7 @@ const AppWrapper = () => {
   );
 };
 
+// Render the AppWrapper component to the root element
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppWrapper />

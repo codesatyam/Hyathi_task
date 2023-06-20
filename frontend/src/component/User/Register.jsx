@@ -56,8 +56,8 @@ const Login = () => {
           {/* Name input field */}
           <div className="form-input-container form-ic2">
             <input id="name" className="form-input" type="text" placeholder=" " name='email'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={name} 
+              onChange={(e) => setName(e.target.value)}  required
             />
             <div className="form-cut form-cut-short"></div>
             <label htmlFor="email" className="form-placeholder">Name</label>
@@ -66,7 +66,7 @@ const Login = () => {
           <div className="form-input-container form-ic2">
             <input id="email" className="form-input" type="email" placeholder=" " name='email'
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}  required
             />
             <div className="form-cut form-cut-short"></div>
             <label htmlFor="email" className="form-placeholder">Email</label>
@@ -75,7 +75,7 @@ const Login = () => {
           <div className="form-input-container form-ic2">
             <input id="password" className="form-input" type="password" placeholder=" " name='email'
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}  required
             />
             <div className="form-cut form-cut-short"></div>
             <label htmlFor="email" className="form-placeholder">Password</label>
@@ -84,7 +84,7 @@ const Login = () => {
           <div className="form-input-container form-ic1">
             <input id="Cpassword" className="form-input" type="password" placeholder=" " name='password'
               value={Cpassword}
-              onChange={(e) => setCPassword(e.target.value)}
+              onChange={(e) => setCPassword(e.target.value)} required
             />
             <div className="form-cut"></div>
             <label htmlFor="firstname" className="form-placeholder">Confirm Password</label>

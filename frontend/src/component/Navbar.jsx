@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext,useState} from 'react'
 import { NavLink,Link } from "react-router-dom";
 import "../assets/styles/Navbar.css"
 import { Context ,server } from ".././main"; 
@@ -7,6 +7,14 @@ import { toast } from 'react-hot-toast';
 
 const Navbar = () => {
   const { isAuthenticated, setIsAuthenticated,loading, setLoading,user,setlogU } =useContext(Context);
+
+
+   const [activeItem, setActiveItem] = useState(0); // Initial active item index
+
+  // Function to handle item click and update the active item
+  const handleItemClick = (index) => {
+    setActiveItem(index);
+  };
 
   const logoutHandler = async () => {
     setLoading(true);
@@ -35,13 +43,13 @@ const Navbar = () => {
        </label>
         <label class="logo">Pokemon<span>APP</span></label>
         <ul>
-            <li> <NavLink className='active'  exact to="/">Home</NavLink></li>
-            <li><NavLink exact to="/adopt">Adopt</NavLink></li>
-            <li><NavLink  exact to="/mypokemon">My Pokemon</NavLink></li>
-            <li><NavLink  exact to="/profile">Profile</NavLink></li>
-            <li><NavLink  exact to="/help">Help</NavLink></li>
-            {isAuthenticated?<li><NavLink disabled={loading} onClick={logoutHandler} exact to="/">Logout</NavLink></li>:
-            <li><NavLink exact to="/signin">Login</NavLink></li>}
+            <li> <NavLink   className={`${activeItem === 0 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(0)}   exact to="/">Home</NavLink></li>
+            <li><NavLink   className={`${activeItem === 1 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(1)}   exact to="/adopt">Adopt</NavLink></li>
+            <li><NavLink className={`${activeItem === 2 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(2)}  exact to="/mypokemon">My Pokemon</NavLink></li>
+            <li><NavLink className={`${activeItem === 3 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(3)}  exact to="/profile">Profile</NavLink></li>
+            <li><NavLink className={`${activeItem === 4 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(4)}  exact to="/help">Help</NavLink></li>
+            {isAuthenticated?<li><NavLink  className="active" disabled={loading} onClick={logoutHandler} exact to="/">Logout</NavLink></li>:
+            <li><NavLink  className={`${activeItem === 5 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(5)} exact to="/signin">Login</NavLink></li>}
         </ul>
      </nav>
     </>

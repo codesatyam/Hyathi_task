@@ -1,79 +1,114 @@
-#profile-con{
+/* Styles for the profile container */
+#profile-con {
     margin: 0;
     padding: 0;
     height: auto;
     width: 100%;
     top: 20px;
     background-color: #8b80ab;
-}
-.dashboard{
+  }
+  
+  /* Styles for the dashboard */
+  .dashboard {
     background-color: mediumblue;
     color: #ffff;
     padding: 0px 30px;
     margin-top: 5px;
     width: 200px;
     border-radius: 5px;
-}
-#profile-con main{
+  }
+  
+  /* Styles for the main content */
+  #profile-con main {
     display: flex;
-}
-#profile-con main #left{
+  }
+  
+  /* Styles for the left section */
+  #profile-con main #left {
     width: 30%;
     padding: 5px;
     margin: 2px;
     border: 2px solid white;
     /* height: fit-content; */
     background-color: #1b242f;
-}
-#profile-con main #left #pic{
+  }
+  
+  /* Styles for the profile picture */
+  #profile-con main #left #pic {
     display: flex;
     justify-content: center;
     color: white;
-    
-}
-#profile-con main #left #personal-details{
+  }
+  
+  /* Styles for the personal details section */
+  #profile-con main #left #personal-details {
     /* border: 2px solid rgb(86, 143, 228); */
     margin-top: 20px;
-    
-}
-
-#profile-con main #left #personal-details h6{
+  }
+  
+  /* Styles for the personal details header */
+  #profile-con main #left #personal-details h6 {
     font-size: 12px;
-     padding: 5px;
-     margin: 0;
+    padding: 5px;
+    margin: 0;
     background-color: aliceblue;
-    border:1px solid #8b80ab;
+    border: 1px solid #8b80ab;
     border-radius: 5px;
-}
-#profile-con main #right{
+  }
+  
+  /* Styles for the right section */
+  #profile-con main #right {
     width: 70%;
     border: 2px solid white;
     /* padding: 5px; */
     margin: 2px 2px 2px 2px;
-}
-#profile-con main #right header{
+  }
+  
+  /* Styles for the header in the right section */
+  #profile-con main #right header {
     display: flex;
     justify-content: space-evenly;
     border: 1px solid white;
     padding: 4px;
-}
-
-#profile-con main #right header span{
-    width: 90px;
-    height: 90px;
+  }
+  
+  /* Styles for the spans in the right section header */
+  #profile-con main #right header span {
+    width: 110px;
+    height: 110px;
     background-color: #1b242f;
     color: #ffff;
     border-radius: 50%;
     display: flex;
+    /* box-sizing: border-box; */
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-}
-#profile-con #right main{
-     display: flex;
-     flex-direction: column;
-}
-.avialable-pokemon-profile{
+  }
+  
+  /* Styles for the main content in the right section */
+  #profile-con #right main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styles for the available pokemon profile */
+  .avialable-pokemon-profile {
     margin: 0;
-}
+  }
+  
+  /* Media query for responsive layout */
+  @media (max-width: 952px) {
+    #profile-con main {
+      flex-direction: column;
+      justify-content: center;
+    }
+    #profile-con main #right {
+      width: 100%;
+    }
+    #profile-con main #left {
+      width: 100%;
+    }
+  }
+  

@@ -1,34 +1,54 @@
-#home-cards{
+/* Home cards container styling */
+#home-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-#pokemon-header{
+  }
+  
+  /* Pokemon header styling */
+  #pokemon-header {
     color: white;
     font-size: 25px;
     font-weight: 500;
     line-height: 60px;
     text-transform: uppercase;
-}
-
-#card-pagination{
-   margin: 8px;
-   margin-bottom: 0;
-   padding: 5px;
-   display: flex;
-   justify-content: center;
-  float: center;
-}
-#card-pagination .btn-style{
+  }
+  
+  /* Card pagination styling */
+  #card-pagination {
+    margin: 8px;
+    margin-bottom: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    float: center;
+  }
+  
+  /* Card pagination button styling */
+  #card-pagination .btn-style {
     margin: 0px 1px;
     border-radius: 5px;
+    padding: 2px 5px;
     color: white;
-    background-color:#0C134F ;
-}
-#card-pagination .btn-style:disabled{
+    border: 0;
+    background-color: #0C134F;
+  }
+  
+  /* Card pagination disabled button styling */
+  #card-pagination .btn-style:disabled {
     background-color: aliceblue;
     color: black;
-}
+  }
+  
+  /* Card pagination arrow styling */
+  #card-pagination .arrow {
+    text-align: center;
+    padding: 0;
+    padding: 0 10px;
+    font-size: 20px;
+    padding-bottom: 2px;
+  }
+  

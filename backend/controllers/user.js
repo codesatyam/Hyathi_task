@@ -26,6 +26,8 @@ export const register = async (req, res, next) => {
   try {
     const { name, email, password,Cpassword } = req.body;
     // console.log(password);
+    if(!name || !email || !password || !Cpassword)
+    return next(new ErrorHandler("Fill all fields",400))
     let user = await User.findOne({ email });
 
     if (user) return next(new ErrorHandler("User Already Exist", 400));

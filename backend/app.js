@@ -1,5 +1,6 @@
 import express from "express";
 import userRouter from "./routes/user.js";
+import pokemonRouter from "./routes/pokemon.js";
 import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import { errorMiddleware } from "./middlewares/error.js";
@@ -24,7 +25,7 @@ app.use(
 );
 // Using routes
 app.use("/api/v1/users", userRouter);
-// app.use("/api/v1/task", taskRouter);
+app.use("/api/v1/pokemon", pokemonRouter);
 
 app.get("/", (req, res) => {
   res.send("Nice working");

@@ -73,10 +73,58 @@ $ node server.js  // to run backend
 
 ```
 
-   
-**Tester details**
-email :- test1@gmail.com
-password :- 12345678
+ ## API(collection of requests).
+ **Register**
+ POST
+ http://localhost:4000/api/v1/users/signup
+
+  {
+    "name":"test8",
+    "email":"test8@gmail.com",
+    "password":"12345678",
+     "Cpassword":"12345678"
+  }
+  
+ **Login**
+ POST
+ http://localhost:4000/api/v1/users/login
+ {
+    "email":"test8@gmail.com",
+    "password":"12345678"
+ }
+
+ **Logout**
+ GET
+ http://localhost:4000/api/v1/users/logout
+
+ **Adopt Pokemon**
+ POST
+ http://localhost:4000/api/v1/pokemon/new
+ {
+    "id":4,
+    "name":"pikavhu",
+      "moves":86,
+     "hp":97,
+    "height":43,
+    "weight":24,
+    "attack":45,
+    "defense":87
+    
+}
+
+**All adopted Pokemons**
+GET
+http://localhost:4000/api/v1/pokemon/my
+
+**Remove pokemon**
+DELETE
+http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
+http://localhost:4000/api/v1/pokemon/:id
+
+**Update Pokemon**
+PUT
+http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
+ 
  
 
  
@@ -93,13 +141,19 @@ password :- 12345678
 **Login page** 
  Users need to login in account. 
  
- **Adopt a Pokemon**
+**Adopt a Pokemon**
   Users can adopt a Pokemon from the available list.
   
-  **Remove Pokemon**
+**Remove Pokemon**
    Users can remove a Pokemon from their adopted list.
    
- **Show More Details**
+ **Attributes of Pokemons**
+ Pokemon has different attributes like breed,id, name, age, health status, attack, defense etc.
+   
+**All adopted Pokemons**
+   Users can see all Pokemon of their adopted pokemons.
+   
+**Show More Details**
  Users can view more details about a specific Pokemon.
 
 **User Details**

@@ -3,11 +3,23 @@ import { Pokemon } from "../models/pokemon.js";
 
 export const newPokemon = async (req, res, next) => {
   try {
-    const { id,name,hp,moves,height,weight,attack,defense} = req.body;
-   
-    let user = await Pokemon.findOne({ id });
+    const { id, name, hp, moves, height, weight, attack, defense } = req.body;
 
-    if (user) return next(new ErrorHandler("Pokemon Already adopted", 400));
+    const userid = req.user._id;
+
+    const Pokemons = await Pokemon.find({ user: userid });
+
+    // const adoptedPokemon = await Pokemon.findOne({id,user});
+    // console.log(adoptedPokemon);
+    //  if (adoptedPokemon) 
+    //      return next(new ErrorHandler("Pokemon Already adopted", 400));
+    for (let i = 0; i < Pokemons.length; i++) {
+      if (Pokemons[i].id === id) {
+        return next(new ErrorHandler("Pokemon Already adopted", 400));
+      }
+    }
+
+    console.log('pass');
     await Pokemon.create({
         id,
         name,

@@ -7,14 +7,14 @@ import PokemonAllCards from './PokemonAllCards';
 const MyPokemon = () => {
   const { pokData,mypokemons,isAuthenticated } = useContext(Context);
   const [search, setSearch] = useState('');
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState(mypokemons);
 
   useEffect(() => {
     setFilteredData(mypokemons); // Initialize with default data
-  }, [pokData]);
+  }, [mypokemons]);
 
   const searchResult = () => {
-    const updatedData = pokData.filter(item => item.id === parseInt(search) || item.name === search);
+    const updatedData = mypokemons.filter(item => item.id === parseInt(search) || item.name === search);
     setFilteredData(updatedData);
   };
   if (!isAuthenticated) return <Navigate to={"/signin"} />;
@@ -44,7 +44,7 @@ const MyPokemon = () => {
       </header>
       <main>
       { mypokemons.length &&
-              <PokemonAllCards data={mypokemons} pages={4} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>
+              <PokemonAllCards data={filteredData} pages={4} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>
              }
         </main>
     </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
             <li> <NavLink   className={`${activeItem === 0 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(0)}   exact to="/">Home</NavLink></li>
             <li><NavLink   className={`${activeItem === 1 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(1)}   exact to="/adopt">Adopt</NavLink></li>
             <li><NavLink className={`${activeItem === 2 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(2)}  exact to="/mypokemon">My Pokemon</NavLink></li>
-            <li><NavLink className={`${activeItem === 3 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(3)}  exact to="/profile">Profile</NavLink></li>
+            {isAuthenticated?<li><NavLink className={`${activeItem === 3 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(3)}  exact to="/profile">Profile</NavLink></li>:""}
             <li><NavLink className={`${activeItem === 4 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(4)}  exact to="/help">Help</NavLink></li>
             {isAuthenticated?<li><NavLink  className="active" disabled={loading} onClick={logoutHandler} exact to="/">Logout</NavLink></li>:
             <li><NavLink  className={`${activeItem === 5 ? 'active' : ''} nav-links`} onClick={() => handleItemClick(5)} exact to="/signin">Login</NavLink></li>}

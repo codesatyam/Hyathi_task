@@ -16,6 +16,7 @@ const Pokemoncard = (props) => {
   const { pokData, setRefresh } = useContext(Context);
   const [fresh, setFresh] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  
 
   const handleClick = () => {
     setShowPopup(true);
@@ -75,7 +76,26 @@ const Pokemoncard = (props) => {
       toast.error(error.response.data.message);
     }
   };
-
+const feedHandler=async (id,hp=150)=>{
+  try{
+    const { data } = await axios.put(
+      `${server}/api/v1/pokemon/${id}`,
+      {
+        hp
+      },
+      {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    toast.success(data.message);
+    setRefresh((prev) => !prev);
+  } catch (error) {
+    toast.error(error.response.data.message);
+  }
+}
   useEffect(() => {
     // Your useEffect code here (if needed)
   }, []);
@@ -107,7 +127,7 @@ const Pokemoncard = (props) => {
           </div>
           <div className="link">
             <button className="nav-link" onClick={handleClick}>
-              Show Details
+              Details
             </button>
             {showPopup && (
               <Details
@@ -142,12 +162,22 @@ const Pokemoncard = (props) => {
                   Adopt
                 </button>
               ) : (
+                <div>
                 <button
-                  className="nav-link"
+                  className="nav-link mx-2"
                   onClick={() => deleteHandler(props.id)}
                 >
                   Remove
                 </button>
+        
+              <button
+                  className="nav-link"
+                  onClick={() => feedHandler(props.id)}
+                >
+                  Feed
+                </button>
+                </div>
+                
               ))}
           </div>
         </div>

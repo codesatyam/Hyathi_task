@@ -44,7 +44,7 @@ const MyPokemon = () => {
       </header>
       <main>
       { mypokemons.length &&
-              <PokemonAllCards data={filteredData} pages={4} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>
+              <PokemonAllCards data={filteredData} pages={5} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>
              }
         </main>
     </div>

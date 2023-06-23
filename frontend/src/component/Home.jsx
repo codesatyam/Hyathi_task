@@ -46,7 +46,7 @@ const Home = () => {
          )
         }
         </div> */}
-        <PokemonAllCards data={pokData} pages={8} adoptlink={true} forhome={true} forProfile={false} />
+        <PokemonAllCards data={pokData} pages={10} adoptlink={true} forhome={true} forProfile={false} />
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
-/* Popup container styling */
-.popup {
+ /* popup.css  of feed */
+   /* Popup container styling */
+.popup-feed {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,64 +10,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 98987;
+    z-index: 98999;
+    /* min-width: 300px; */
   }
   
   /* Popup content styling */
-  .popup-content {
+  .popup-content-feed {
     background-color: #fff;
     padding: 20px;
     border-radius: 4px;
     max-width: 400px;
+    min-width: 250px;
     text-align: center;
   }
   
   /* Popup content image styling */
-  .popup-content img {
-    max-height: 200px;
-  }
+ 
   
   /* Popup content heading styling */
-  .popup-content h4 {
+  .popup-content-feed h4 {
     color: black;
     text-transform: uppercase;
   }
   
   /* Popup Pokemon details styling */
-  .popup .pokemon-details {
+  .popup-feed .pokemon-details-feed {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
     color: black;
   }
-  
-  /* Popup Pokemon details span styling */
-  .popup .pokemon-details span {
-    margin: 5px;
-    background-color: darkslategrey;
-    color: #fff;
-    padding: 2px 5px;
-    border-radius: 5px;
+  .popup-feed .pokemon-details-feed input{
+    width: 50px;
   }
   
-  /* Popup paragraph styling */
-  .popup p {
-    margin-bottom: 20px;
-  }
+ 
+  
+ 
   
   /* Popup button styling */
-  .popup button {
+  .popup-feed .feed-btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
+    margin: 10px 0;
     border-radius: 4px;
     cursor: pointer;
   }
   
   /* Popup button hover styling */
-  .popup button:hover {
+  .popup-feed .feed-btn:hover {
     background-color: #0056b3;
+  }
+  .input-feed{
+    margin-bottom: 5px;
   }
   

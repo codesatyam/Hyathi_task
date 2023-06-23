@@ -64,8 +64,8 @@ const Profile = () => {
                 </span>
              </header>
              <main className="avialable-pokemon-profile">
-             { mypokemons.length &&
-              <PokemonAllCards data={mypokemons} pages={3} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>
+             { mypokemons.length?
+              <PokemonAllCards data={mypokemons} pages={3} title={"Adopted Pokemon"} adoptLink={false} forhome={false} forProfile={true}/>:""
              }
              </main>
             </section>

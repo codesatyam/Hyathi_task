@@ -7,7 +7,7 @@ export const isAuthenticated = async (req, res, next) => {
   if (!token) 
   return res.status(404).json({
     success: false,
-    message: "Login First",
+    message: "Login Required",
   });
   //  const token=req.headers.cookie.slice(6);
   // console.log(token);

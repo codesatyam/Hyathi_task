@@ -3,7 +3,7 @@ import {
   deletePokemon,
   getMyPokemon,
   newPokemon,
-  updatePokemon,
+  feedPokemon,
 } from "../controllers/pokemon.js";
 import { isAuthenticated } from "../middlewares/auth.js";
 
@@ -15,7 +15,7 @@ router.get("/my", isAuthenticated, getMyPokemon);
 
 router
   .route("/:id")
-  .put(isAuthenticated, updatePokemon)
+  .put(isAuthenticated, feedPokemon)
   .delete(isAuthenticated, deletePokemon);
 
 export default router;

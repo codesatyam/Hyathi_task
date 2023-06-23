@@ -121,9 +121,12 @@ DELETE
 http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
 http://localhost:4000/api/v1/pokemon/:id
 
-**Update Pokemon**
+**Update Pokemon or feed (only health as hp is implemented)**
 PUT
 http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
+{
+   "hp"=150
+}
  
  
 
@@ -152,6 +155,9 @@ http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
    
 **All adopted Pokemons**
    Users can see all Pokemon of their adopted pokemons.
+
+**Feed Pokemon**
+User can feed any adopted pokemon by clicking on feed (default 150  health feed) 
    
 **Show More Details**
  Users can view more details about a specific Pokemon.
@@ -161,6 +167,7 @@ http://localhost:4000/api/v1/pokemon/64912d5584ae957eae476145
  
 **User Authentication** 
 Users can sign up, sign in, and sign out to access the features.
+
   
  
 # Screenshots of this project
